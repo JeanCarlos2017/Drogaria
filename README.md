@@ -5,7 +5,7 @@
  
  O projeto presente nesse repositório é referente a um sistema de uma Drogaria que conta com o controle de clientes, vendas e funcionários, para tanto estão presentes as funções de salvar, editar, listar, buscar e remover cada um deles.
  
-## Até o momento no projeto foi usado as seguintes tecnologias: 
+## Até o presente momento no projeto foram usadas as seguintes tecnologias: 
  * [Maven](https://maven.apache.org/) - Dependency Management
  * [MySQL](https://www.mysql.com/) - Home
  * [Hibernate](https://dzone.com/articles/hibernate-5-xml-configuration-example) - Hibernate 5 XML Configuration Example 
