@@ -31,7 +31,7 @@ public class ProdutoDAOTest {
 		}
 	}
 	
-	@Test @Ignore
+	@Test 
 	public void listarProduto() {
 		ProdutoDAO produtoDAO = new ProdutoDAO();
 		List<Produto> listaDeProduto = produtoDAO.listar();
@@ -114,7 +114,7 @@ public class ProdutoDAOTest {
 		System.out.println("Quantidade de produtos distintos cadastrados é igual a: "+res+"\n\n");
 	}
 	
-	@Test
+	@Test @Ignore
 	public void contadorDeRegistrosDistintosPorCampo() {
 		ProdutoDAO produtoDAO = new ProdutoDAO();
 		Object res = produtoDAO.getQntRegistrosDistintosPorCampo(new Produto(), "preco");

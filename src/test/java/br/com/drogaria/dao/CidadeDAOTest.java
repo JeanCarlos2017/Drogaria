@@ -34,7 +34,7 @@ public class CidadeDAOTest {
 		}
 	}
 	
-	@Test @Ignore
+	@Test 
 	public void listarCidade() {
 		List<Cidade> listaDeCidades = cidadeDAO.listar();
 		for (Cidade c: listaDeCidades) System.out.println(c.toString());
@@ -78,7 +78,7 @@ public class CidadeDAOTest {
 		}
 	}
 	
-	@Test
+	@Test @Ignore
 	public void alterarEstadoDaCidade() {
 	   //buscando o estado
 		Long codigoEstado = 2L;
@@ -89,7 +89,8 @@ public class CidadeDAOTest {
 		Long codigoCidade = 12L;
 		cidade = cidadeDAO.buscarPorCodigo(codigoCidade);
 		
-		if ((novoEstado == null) || (cidade == null)) System.out.println("Erro! Código de estado e/ou cidade não encontrado!");
+		if ((novoEstado == null) || (cidade == null)) 
+			System.out.println("Erro! Código de estado e/ou cidade não encontrado!");
 		else {
 			System.out.println(cidade.toString());
 			cidade.setNome("Rio de Janeiro");

@@ -20,7 +20,8 @@ public class Cliente extends GenericDomain {
 	@Column(nullable = false)
 	private Boolean liberado;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	//@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne()
     @JoinColumn(name = "pessoa_codigo")
     private Pessoa pessoa;
 

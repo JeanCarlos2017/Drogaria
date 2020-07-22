@@ -20,7 +20,7 @@ public class EstadoDAOTest {
 		estadoDAO.salvar(estado);		
 	}
 	
-	@Test @Ignore
+	@Test 
 	public void listar() {
 		EstadoDAO estadoDAO = new EstadoDAO();
 		List<Estado> resultado = estadoDAO.listar();
@@ -53,7 +53,7 @@ public class EstadoDAOTest {
 		for (Estado e: resultado) System.out.println(e.toString());
 	}
 	
-	@Test 
+	@Test @Ignore
 	public void excluir() {
 		Long codigo = 6L;
 		EstadoDAO estadoDAO = new EstadoDAO();

@@ -9,7 +9,6 @@ import javax.persistence.criteria.CriteriaQuery;
 
 import javax.persistence.criteria.Root;
 
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -81,16 +80,16 @@ public class GenericDAO <Entidade> {
 	public Entidade buscarPorCodigo(Long codigo) {
 		Session sessao = HibernateUtil.getFabricaDeSessoes().openSession();
 		Entidade resultado = null;
-		try {
-			  resultado = sessao.find(classe, codigo);
-	          return resultado;	    
-	    }catch (RuntimeException error) {
-			// TODO: handle exception
-			System.out.println("Não foi possível fazer a busca. Erro: "+error);
-			throw error;
-		}finally {
-			sessao.close();
-		}
+	    try {
+	        resultado = sessao.find(classe, codigo);
+	            return resultado;     
+	      }catch (RuntimeException error) {
+	      // TODO: handle exception
+	      System.out.println("Não foi possível fazer a busca. Erro: "+error);
+	      throw error;
+	    }finally {
+	      sessao.close();
+	    }
 	}
 	
 	public List<Entidade> buscarPorCampo(String nomeCampo, Object valorCampo){

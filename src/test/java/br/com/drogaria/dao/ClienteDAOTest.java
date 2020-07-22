@@ -33,4 +33,26 @@ public class ClienteDAOTest {
 		List<Cliente> listaCLiente = clienteDAO.buscarPorCampo("pessoa_codigo", codigoPessoa);
 		for (Cliente c: listaCLiente) System.out.println(c.toString());
 	}
+	
+	@Test @Ignore
+	public void listarClientes() {
+		ClienteDAO clienteDAO = new ClienteDAO();
+		List<Cliente> listaCliente = clienteDAO.listar();
+		for (Cliente c: listaCliente) System.out.println(c.toString());
+	}
+	
+	@Test @Ignore
+	public void excluirCliente() {
+		//buscar pessoa 
+		Long codigoCliente = 31L;
+		ClienteDAO clienteDAO = new ClienteDAO();
+		Cliente cliente = clienteDAO.buscarPorCodigo(codigoCliente);
+		
+		if (cliente == null) {
+			System.out.println("Erro! Código de cliente não encontrado");
+		}else {
+			System.out.println(cliente.toString());
+			clienteDAO.excluir(cliente);
+		}
+	}
 }

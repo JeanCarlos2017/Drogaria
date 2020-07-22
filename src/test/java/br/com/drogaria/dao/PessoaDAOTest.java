@@ -48,6 +48,7 @@ public class PessoaDAOTest {
 			System.out.println(pessoa.toString());
 		}
 	}
+	
 	@Test @Ignore
 	public void deletar() {
 		//buscar pessoa 

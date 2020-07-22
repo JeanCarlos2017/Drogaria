@@ -12,6 +12,16 @@ import javax.persistence.TemporalType;
 @SuppressWarnings("serial")
 @Entity
 public class Funcionario extends GenericDomain {
+	
+	public Funcionario() {}
+	public Funcionario(String carteiraDeTrabalho, Date dataAdmissao, Pessoa pessoa) {
+		super();
+		this.carteiraDeTrabalho = carteiraDeTrabalho;
+		this.dataAdmissao = dataAdmissao;
+		this.pessoa = pessoa;
+	}
+
+
 	@Column (length = 15, nullable = false)
 	private String carteiraDeTrabalho;
 	
@@ -20,7 +30,16 @@ public class Funcionario extends GenericDomain {
 	
 	@OneToOne @JoinColumn(nullable = false)
 	private Pessoa pessoa;
-
+	
+	@Override
+	public String toString() {
+		return "\n"+this.pessoa.toString()+
+				"\nData de adimissão: "+this.dataAdmissao+
+				"\nCarteira de Trabalho: "+this.carteiraDeTrabalho+"\n\n";
+		
+	}
+	
+	//getters and setters 
 	public String getCarteiraDeTrabalho() {
 		return carteiraDeTrabalho;
 	}

@@ -32,12 +32,30 @@
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>8.0.18</version>
 		</dependency>
+		
 		<!-- jsf -->
 		<dependency>
 		  <groupId>org.glassfish</groupId>
 		  <artifactId>javax.faces</artifactId>
 		  <version>2.3.5</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.enterprise/cdi-api -->
+		<dependency>
+		    <groupId>javax.enterprise</groupId>
+		    <artifactId>cdi-api</artifactId>
+		    <version>2.0.SP1</version>
+		</dependency>
+		
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
+		<dependency>
+		    <groupId>org.primefaces</groupId>
+		    <artifactId>primefaces</artifactId>
+		    <version>7.0</version>
+		</dependency>
+		
 	</dependencies>
 	
 	<!-- Parâmetros de execução -->
