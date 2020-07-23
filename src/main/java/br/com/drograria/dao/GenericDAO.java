@@ -82,7 +82,7 @@ public class GenericDAO <Entidade> {
 		Entidade resultado = null;
 	    try {
 	        resultado = sessao.find(classe, codigo);
-	            return resultado;     
+	        return resultado;     
 	      }catch (RuntimeException error) {
 	      // TODO: handle exception
 	      System.out.println("Não foi possível fazer a busca. Erro: "+error);

@@ -13,7 +13,7 @@ import br.com.drograria.dao.ClienteDAO;
 import br.com.drograria.dao.PessoaDAO;
 
 public class ClienteDAOTest {
-	@Test 
+	@Test @Ignore
 	public void salvar() {
 	   //buscar pessoa 
 		Long codigoPessoa = 27L;

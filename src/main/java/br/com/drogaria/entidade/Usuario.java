@@ -38,7 +38,8 @@ public class Usuario extends GenericDomain{
 		return this.pessoa.toString()+
 				"senha: "+this.senha+
 				"\nTipo: "+this.tipo+
-				"\nEstá ativo: "+this.ativo+"\n";
+				"\nEstá ativo: "+this.ativo+
+				"\nUsuario ID: "+this.getCodigo()+"\n";
 	}
 //getters and setters 	
 	public void setSenha(String senha) {
